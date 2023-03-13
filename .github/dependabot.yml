@@ -7,7 +7,13 @@ updates:
       interval: "weekly"
   # Enable updates for Rust packages
   - package-ecosystem: "cargo"
-    directory: "/src/tc/rust" # Location of package manifests
+    directory: 
+      - "/src/tc/rust" # Location of package manifests
+      - "/integration-tests/Cargo.toml"
+      - "/taskchampion/Cargo.toml"
+      - "/lib/Cargo.toml"
+      - "/xtask/Cargo.toml"
+      - "/sync-server/Cargo.toml"
     schedule:
       interval: "daily"
     ignore:
