@@ -7,7 +7,73 @@ updates:
       interval: "weekly"
   # Enable updates for Rust packages
   - package-ecosystem: "cargo"
+    directory: "/" # Location of package manifests
+    schedule:
+      interval: "daily"
+    ignore:
+      # skip patch updates, as they can be quite noisy, but keep
+      # minor and major updates so that we don't fall too far
+      # behind
+      - dependency-name: "*"
+        update-types: ["version-update:semver-patch"]
+  # Enable updates for Rust packages
+  - package-ecosystem: "cargo"
     directory: "/src/tc/rust" # Location of package manifests
+    schedule:
+      interval: "daily"
+    ignore:
+      # skip patch updates, as they can be quite noisy, but keep
+      # minor and major updates so that we don't fall too far
+      # behind
+      - dependency-name: "*"
+        update-types: ["version-update:semver-patch"]
+  # Enable updates for Rust packages
+  - package-ecosystem: "cargo"
+    directory: "/integration-tests/Cargo.toml"
+    schedule:
+      interval: "daily"
+    ignore:
+      # skip patch updates, as they can be quite noisy, but keep
+      # minor and major updates so that we don't fall too far
+      # behind
+      - dependency-name: "*"
+        update-types: ["version-update:semver-patch"]
+  # Enable updates for Rust packages
+  - package-ecosystem: "cargo"
+    directory: "/taskchampion/Cargo.toml"
+    schedule:
+      interval: "daily"
+    ignore:
+      # skip patch updates, as they can be quite noisy, but keep
+      # minor and major updates so that we don't fall too far
+      # behind
+      - dependency-name: "*"
+        update-types: ["version-update:semver-patch"]
+  # Enable updates for Rust packages
+  - package-ecosystem: "cargo"
+    directory: "/lib/Cargo.toml"
+    schedule:
+      interval: "daily"
+    ignore:
+      # skip patch updates, as they can be quite noisy, but keep
+      # minor and major updates so that we don't fall too far
+      # behind
+      - dependency-name: "*"
+        update-types: ["version-update:semver-patch"]
+  # Enable updates for Rust packages
+  - package-ecosystem: "cargo"
+    directory: "/xtask/Cargo.toml"
+    schedule:
+      interval: "daily"
+    ignore:
+      # skip patch updates, as they can be quite noisy, but keep
+      # minor and major updates so that we don't fall too far
+      # behind
+      - dependency-name: "*"
+        update-types: ["version-update:semver-patch"]
+  # Enable updates for Rust packages
+  - package-ecosystem: "cargo"
+    directory: "/sync-server/Cargo.toml"
     schedule:
       interval: "daily"
     ignore:
