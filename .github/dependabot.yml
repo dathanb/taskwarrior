@@ -7,7 +7,7 @@ updates:
       interval: "weekly"
   # Enable updates for Rust packages
   - package-ecosystem: "cargo"
-    directory: "/" # Location of package manifests
+    directory: "/src/tc/rust" # Location of package manifests
     schedule:
       interval: "daily"
     ignore:
