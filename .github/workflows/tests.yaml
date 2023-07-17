@@ -33,7 +33,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   tests-macos-13:
     name: tests (Mac OS 13.latest)
-    runs-on: macOS-13/20230419.1
+    runs-on: macos-13
     steps:
       - uses: actions/checkout@v3
 
